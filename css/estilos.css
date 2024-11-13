@@ -1,119 +1,329 @@
-@charset "utf-8"; @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Arima', Variable, font;
 }
 
 
-header{
+header {
     background-color: #cda7a7;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    
+    height: 100px;
 }
 
-
-footer{
-    background-color: #cda7cc;
-    padding: 30px;
-    text-align: center;
-
+header div {
+    height: 80px;
+    position: absolute;
 }
 
-.logo {
-    width: 100px; 
-    height: auto;
+header ul {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-a{
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a, .consultas-info a {
     color: #a63b63;
     text-decoration: none;
 }
 
-li{
-    list-style: none;
-}
-
-ul li {
-    display: inline; 
-    text-align: center;
-    margin: 5px;
-}
-
-h1{
-    font-size: 20px;
+h1 {
     color: #932c52;
     text-align: center;
     margin: 20px;
-    
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
 
-h2{
-    font-family: 'Arima',Variable, font;
-    color:#9f2179
-    
+.banner video {
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #cda7cc;
+    padding: 30px;
+    text-align: center;
+    height: 100px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+h2 {
+    font-family: 'Arima', Variable, font;
+    color: #9f2179
 }
 
 .actividades {
-    display: flex; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    flex-direction: row;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 10vw;
 }
 
+.actividades article {
+    margin: 0 2.5vw 4vh 2.5vw;
+}
 
-article img {
-    max-width: 100%; 
-    height: auto; 
+.actividades article div {
+    width: 35vw;
+    height: 300px;
     border-radius: 20px;
 }
+
+#astrologia {
+    background-image: url("../imagenes/astrologia.png");
+    background-size: cover;
+}
+
+#yoga {
+    background-image: url("../imagenes/yoga.jpg");
+    background-size: cover;
+}
+
+#tarot {
+    background-image: url("../imagenes/tarot.jpg");
+    background-size: cover;
+}
+
+#mindfulness {
+    background-image: url("../imagenes/mindfulness.jpg");
+    background-size: cover;
+}
+
+#pilates {
+    background-image: url("../imagenes/pilates.webp");
+    background-size: cover;
+}
+
+#nutricion {
+    background-image: url("../imagenes/nutricion.jpeg");
+    background-size: cover;
+}
+
+#funcional {
+    background-image: url("../imagenes/gymfuncional.png");
+    background-size: cover;
+}
+
+#metodowinhof {
+    background-image: url("../imagenes/winhof.png");
+    background-size: cover;
+}
+
 
 body {
     background-color: rgb(255, 255, 255);
 }
 
 
-p{
+p {
     font-size: 15px;
     color: #814242;
 }
-.conteiner{
-    margin: 20px;
+
+.conteiner {
     display: flex;
-    gap: 20px; 
-    justify-content: space-around;
-    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteiner article {
+    width: 50vw;
+    margin: 0 0 20px 0;
 }
 
 .activity {
     background-color: #d5c4c4;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    width: 500px;
 }
 
-.consultas-info{
+.activity p {
+    font-size: 11pt;
+}
+
+.consultas-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #d5c4c4;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 90px;
+    width: 640px;
+    margin: 0 0 20px 0;
 }
 
-.nosotros-info{
+.nosotros-info {
     background-color: #f0f0f0;
     padding: 30px;
     border-radius: 9px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 70px;
+}
+
+.conteiner article {
+    display: flex;
+}
+
+#gif-astrologia, #gif-yoga, #gif-mindfulness, #gif-pilates, #gif-gymfuncional, #gif-nutricion, #gif-tarot {
+    height: calc(36px * 5);
+}
+
+.consultas-info .grid {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.consultas-info .grid img {
+    width: 36px;
+    height: 36px;
+    margin: auto;
+}
+
+.consultas img {
+    width: 640px;
+    height: auto;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#titulo-profesionales {
+    text-align: center;
+}
+
+.profesionales {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profesionales div {
+    width: 20vw;
+    height: 300px;
+    margin: 0 20px 0 0;
+}
+
+.profesionales div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#profesional-1 {
+    background-image: url("../imagenes/personauno.jpg");
+    background-size: cover;
+}
+
+#profesional-2 {
+    background-image: url("../imagenes/personados.jpg");
+    background-size: cover;
+}
+
+#profesional-3 {
+    background-image: url("../imagenes/personatres.jpg");
+    background-size: cover;
+}
+
+#profesional-4 {
+    background-image: url("../imagenes/personacuatro.jpg");
+    background-size: cover;
+}
+
+@media screen and (max-width: 425px) {
+
+    .actividades {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .actividades article {
+        margin: 0 auto 4vh auto;   
+    }
+
+    .actividades article div {
+        width: 90vw;
+        height: 300px;
+    }
+
+    .conteiner article {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .activity, video {
+        width: 90vw;
+        height: auto;
+    }
+
+    .consultas-info {
+        width: 90vw;
+    }
+
+    .nosotros-info {
+        width: 90vw;
+    }
+
+    .profesionales {
+        flex-direction: column;
+    }
+
+    .profesionales div {
+        width: 90vw;
+        height: 300px;
+        margin: 20px auto;
+    }
+
+    .conteiner {
+        margin: auto;
+    }
+
+    .activity {
+        margin: auto;
+        width: 100%;
+    }
+
+    .activity p {
+        font-size: 9pt;
+    }
+
+    .consultas img {
+        width: 90vw;
+        margin: 0 0 20px 0;
+    }
+
+    .consultas-info .grid {
+        width: 80%;
+        margin: auto;
+    }
 }
